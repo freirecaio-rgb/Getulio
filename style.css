@@ -169,13 +169,25 @@ button:hover {
 /* ===== RODAPÉ ===== */
 
 .rodape {
-    background-color: #006b2d;
+    background: linear-gradient(135deg, #006b2d, #009c3b);
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 30px;
     border-top: 8px solid #ffdf00;
 }
 
+.rodape h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
 .rodape p {
-    font-size: 18px;
+    font-size: 17px;
+    margin: 7px;
+}
+
+.rodape .autoral {
+    color: #ffdf00;
+    font-weight: bold;
+    margin-top: 18px;
 }
