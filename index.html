@@ -4,74 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>História de Getúlio Vargas</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f1f1f1;
-            margin: 0;
-            color: #222;
-        }
+    <!-- Conecta o CSS -->
+    <link rel="stylesheet" href="style.css">
 
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
+    <!-- Biblioteca p5.js -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
 
-        .principal {
-            max-width: 900px;
-            margin: 30px auto;
-            background-color: white;
-            padding: 25px;
-            border-radius: 10px;
-        }
-
-        .imagem {
-            text-align: center;
-            margin: 20px;
-        }
-
-        img {
-            width: 300px;
-            border-radius: 8px;
-        }
-
-        video {
-            width: 100%;
-            max-width: 700px;
-            display: block;
-            margin: 20px auto;
-        }
-
-        button {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #555;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+    <!-- Conecta o p5.js -->
+    <script src="sketch.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Cabeçalho do site -->
     <header>
         <h1>Getúlio Vargas</h1>
-        <p>Um dos personagens mais importantes da história do Brasil</p>
+        <p>Um dos principais políticos da história do Brasil</p>
     </header>
 
     <!-- Primeira div class -->
@@ -81,16 +31,14 @@
             <h2>Quem foi Getúlio Vargas?</h2>
 
             <p>
-                Getúlio Vargas foi um político brasileiro que governou o Brasil
-                em diferentes períodos. Ele nasceu em 1882, no Rio Grande do Sul,
-                e teve grande influência na política brasileira durante o século XX.
+                Getúlio Vargas nasceu em 1882, no Rio Grande do Sul.
+                Foi presidente do Brasil e teve grande influência na
+                política brasileira durante o século XX.
             </p>
 
             <!-- Primeira imagem -->
-            <div class="imagem">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Getulio_Vargas_-_CPDOC.jpg"
-                     alt="Getúlio Vargas">
-            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Getulio_Vargas_-_CPDOC.jpg/640px-Getulio_Vargas_-_CPDOC.jpg"
+                 alt="Getúlio Vargas">
         </section>
 
         <article>
@@ -98,66 +46,68 @@
 
             <p>
                 Vargas chegou ao poder em 1930, após a Revolução de 1930.
-                Seu governo promoveu diversas mudanças políticas, econômicas
-                e sociais no Brasil.
+                Durante seu governo ocorreram diversas mudanças políticas,
+                econômicas e sociais.
             </p>
 
             <p>
-                Durante seu governo, foram criadas importantes leis trabalhistas,
-                incluindo a Consolidação das Leis do Trabalho (CLT), em 1943.
+                Uma das principais medidas foi a criação da Consolidação
+                das Leis do Trabalho, a CLT, em 1943.
             </p>
 
             <h2>Estado Novo</h2>
 
             <p>
-                Em 1937, Vargas estabeleceu o Estado Novo, um período
-                autoritário que durou até 1945. Durante esse período,
-                o governo concentrou grande quantidade de poder e restringiu
-                liberdades políticas.
+                Em 1937, Vargas implantou o Estado Novo, um período
+                autoritário que durou até 1945.
             </p>
 
             <!-- Segunda imagem -->
-            <div class="imagem">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Get%C3%BAlio_Vargas_1930.jpg"
-                     alt="Getúlio Vargas em 1930">
-            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Get%C3%BAlio_Vargas_1930.jpg/640px-Get%C3%BAlio_Vargas_1930.jpg"
+                 alt="Getúlio Vargas em 1930">
         </article>
 
         <section>
             <h2>Vídeo sobre Getúlio Vargas</h2>
 
-            <!-- Vídeo -->
+            <!-- Coloque um arquivo chamado video.mp4 na mesma pasta -->
             <video controls>
-                <source src="video-getulio.mp4" type="video/mp4">
-                Seu navegador não suporta vídeos.
+                <source src="video.mp4" type="video/mp4">
+                Seu navegador não conseguiu carregar o vídeo.
             </video>
         </section>
 
         <section>
-            <h2>Você gostou do conteúdo?</h2>
+            <h2>Gostou do conteúdo?</h2>
 
             <!-- Botão de Like -->
             <button onclick="curtir()">👍 Like</button>
+
             <p id="likes">0 curtidas</p>
+        </section>
+
+        <section>
+            <h2>Interação com p5.js</h2>
+
+            <p>Clique no quadro para aumentar o círculo.</p>
+
+            <div id="p5-container"></div>
         </section>
 
     </div>
 
     <!-- Segunda div class -->
-    <div class="imagem">
-        <p>Trabalho escolar sobre a história do Brasil.</p>
+    <div class="rodape">
+        <p>Trabalho escolar - História do Brasil</p>
     </div>
 
-    <footer>
-        <p>Site sobre Getúlio Vargas - História do Brasil</p>
-    </footer>
-
     <script>
-        // Função para aumentar o número de curtidas
+        // Contador de curtidas
         let contador = 0;
 
         function curtir() {
             contador++;
+
             document.getElementById("likes").innerText =
                 contador + " curtida(s)";
         }
@@ -166,3 +116,4 @@
 </body>
 </html>
 ```
+
