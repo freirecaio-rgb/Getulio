@@ -1,164 +1,303 @@
-/* ===== ESTILO GERAL ===== */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f1f8f3;
-    margin: 0;
-    color: #17251b;
-    font-size: 19px;
+/* ================================
+   ESTILO GERAL
+================================ */
+
+html {
+    scroll-behavior: smooth;
 }
 
-/* ===== CABEÇALHO ===== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef7f0;
+    color: #17251b;
+    font-size: 18px;
+}
+
+/* ================================
+   CABEÇALHO
+================================ */
 
 header {
-    background: linear-gradient(135deg, #006b2d, #009c3b);
-    color: white;
+    position: relative;
+    overflow: hidden;
     text-align: center;
-    padding: 35px;
-    border-bottom: 8px solid #ffdf00;
+    color: white;
+    background: linear-gradient(135deg, #006b2d, #009c3b);
+    padding: 55px 20px;
+    border-bottom: 10px solid #ffdf00;
 }
 
 header h1 {
-    font-size: 46px;
-    margin: 10px;
+    position: relative;
+    z-index: 2;
+    font-size: 48px;
+    margin: 10px 0;
+    letter-spacing: 3px;
 }
 
 header p {
+    position: relative;
+    z-index: 2;
     font-size: 21px;
 }
 
-/* ===== CONTEÚDO ===== */
+/* Bandeira decorativa */
 
-.principal {
-    max-width: 900px;
-    margin: 35px auto;
-    background-color: white;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 80, 30, 0.15);
+.bandeira {
+    position: absolute;
+    width: 220px;
+    height: 140px;
+    background-color: #009c3b;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.18;
 }
 
-/* Títulos */
+.losango {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background-color: #ffdf00;
+    left: 45px;
+    top: 5px;
+    transform: rotate(45deg);
+}
+
+.circulo {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #002776;
+    border-radius: 50%;
+    left: 75px;
+    top: 35px;
+}
+
+/* ================================
+   MENU
+================================ */
+
+nav {
+    background-color: #002776;
+    text-align: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: #ffdf00;
+}
+
+/* ================================
+   CONTEÚDO
+================================ */
+
+main {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.cartao {
+    background-color: white;
+    margin-bottom: 35px;
+    padding: 35px;
+    border-radius: 12px;
+    border-left: 7px solid #009c3b;
+    box-shadow: 0 5px 18px rgba(0, 70, 30, 0.12);
+}
 
 h2 {
     color: #007f35;
-    font-size: 31px;
-    border-left: 6px solid #ffdf00;
-    padding-left: 12px;
+    font-size: 32px;
+    border-bottom: 3px solid #ffdf00;
+    padding-bottom: 10px;
 }
 
-/* Textos */
+h3 {
+    color: #006b2d;
+    font-size: 24px;
+}
 
 p {
-    font-size: 20px;
+    font-size: 19px;
     line-height: 1.7;
 }
 
-/* ===== IMAGENS ===== */
+/* ================================
+   IMAGENS
+================================ */
 
 img {
-    width: 400px;
+    display: block;
+    width: 420px;
     max-width: 100%;
-    display: block;
-    margin: 25px auto;
-    border-radius: 10px;
+    margin: 30px auto 10px;
     border: 5px solid #009c3b;
-}
-
-/* ===== VÍDEO ===== */
-
-.video {
-    width: 600px;
-    max-width: 90%;
-    margin: 30px auto;
-}
-
-.video iframe {
-    width: 100%;
-    height: 340px;
-    border: 5px solid #ffdf00;
     border-radius: 10px;
-    display: block;
 }
 
-/* ===== BOTÃO LIKE ===== */
+/* ================================
+   LISTA
+================================ */
 
-button {
-    background-color: #009c3b;
-    color: white;
-    border: none;
-    padding: 13px 25px;
+li {
     font-size: 19px;
-    border-radius: 7px;
-    cursor: pointer;
+    margin: 12px 0;
 }
 
-button:hover {
-    background-color: #006b2d;
-}
-
-/* ===== LINHA DO TEMPO ===== */
+/* ================================
+   LINHA DO TEMPO
+================================ */
 
 .linha-tempo {
     position: relative;
-    margin: 40px 0;
-    padding-left: 35px;
+    margin: 45px 10px;
+    padding-left: 45px;
 }
 
-/* Linha vertical */
+/* Linha central */
 
 .linha-tempo::before {
     content: "";
     position: absolute;
-    left: 12px;
+    left: 14px;
     top: 0;
     bottom: 0;
-    width: 5px;
-    background: linear-gradient(#009c3b, #ffdf00, #009c3b);
+    width: 6px;
+    background: linear-gradient(
+        to bottom,
+        #009c3b,
+        #ffdf00,
+        #002776,
+        #009c3b
+    );
 }
 
-/* Cada acontecimento */
+/* Evento */
 
 .evento {
     position: relative;
     background-color: #f1f8f3;
     border: 2px solid #009c3b;
-    border-radius: 10px;
-    padding: 18px 20px;
-    margin: 25px 0;
-    box-shadow: 0 3px 8px rgba(0, 80, 30, 0.12);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 30px 0;
+    transition: transform 0.3s;
 }
 
-/* Bolinha da linha do tempo */
+.evento:hover {
+    transform: translateX(8px);
+}
+
+/* Círculo do evento */
 
 .evento::before {
     content: "";
     position: absolute;
-    left: -33px;
+    left: -48px;
     top: 22px;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     background-color: #ffdf00;
-    border: 4px solid #009c3b;
+    border: 5px solid #009c3b;
     border-radius: 50%;
 }
 
 /* Ano */
 
-.evento h3 {
+.evento span {
+    display: inline-block;
+    background-color: #009c3b;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* ================================
+   INFORMAÇÕES SOBRE O BRASIL
+================================ */
+
+.informacoes {
+    display: flex;
+    gap: 20px;
+}
+
+.informacoes div {
+    flex: 1;
+    padding: 20px;
+    background-color: #f1f8f3;
+    border-top: 5px solid #ffdf00;
+    border-radius: 8px;
+}
+
+.informacoes h3 {
     color: #007f35;
-    font-size: 28px;
-    margin: 0 0 8px;
 }
 
-/* Título do acontecimento */
+/* ================================
+   VÍDEO
+================================ */
 
-.evento h4 {
-    color: #006b2d;
-    font-size: 22px;
-    margin: 5px 0;
+.video {
+    width: 650px;
+    max-width: 100%;
+    margin: 30px auto;
 }
 
-/* ===== P5.JS ===== */
+.video iframe {
+    width: 100%;
+    height: 365px;
+    display: block;
+    border: 5px solid #ffdf00;
+    border-radius: 10px;
+}
+
+/* ================================
+   BOTÃO
+================================ */
+
+.interacao {
+    text-align: center;
+}
+
+button {
+    background-color: #009c3b;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #006b2d;
+    transform: scale(1.05);
+}
+
+#likes {
+    font-weight: bold;
+    color: #007f35;
+}
+
+/* ================================
+   P5.JS
+================================ */
 
 #p5-container {
     display: flex;
@@ -166,28 +305,56 @@ button:hover {
     margin-top: 25px;
 }
 
-/* ===== RODAPÉ ===== */
+/* ================================
+   RODAPÉ
+================================ */
 
-.rodape {
+footer {
     background: linear-gradient(135deg, #006b2d, #009c3b);
     color: white;
     text-align: center;
-    padding: 30px;
-    border-top: 8px solid #ffdf00;
+    padding: 35px 20px;
+    border-top: 10px solid #ffdf00;
 }
 
-.rodape h3 {
+footer h3 {
+    color: white;
     font-size: 25px;
-    margin-bottom: 15px;
 }
 
-.rodape p {
+footer p {
     font-size: 17px;
-    margin: 7px;
 }
 
-.rodape .autoral {
-    color: #ffdf00;
-    font-weight: bold;
-    margin-top: 18px;
+/* ================================
+   CELULAR
+================================ */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    .cartao {
+        padding: 22px;
+    }
+
+    .informacoes {
+        display: block;
+    }
+
+    .informacoes div {
+        margin-bottom: 15px;
+    }
+
+    .video iframe {
+        height: 250px;
+    }
+
 }
