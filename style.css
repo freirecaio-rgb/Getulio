@@ -1,46 +1,49 @@
 /* Estilo geral da página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5efe3;
+    background-color: #f4f7f2;
     margin: 0;
-    color: #222222;
-    font-size: 18px;
+    color: #222;
+    font-size: 19px;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #6b4f35;
+    background-color: #009c3b;
     color: white;
     text-align: center;
-    padding: 35px;
+    padding: 30px;
+    border-bottom: 8px solid #ffdf00;
 }
 
 header h1 {
-    font-size: 40px;
+    font-size: 44px;
+    margin-bottom: 10px;
 }
 
 header p {
-    font-size: 20px;
+    font-size: 21px;
 }
 
 /* Primeira div class */
 .principal {
     max-width: 900px;
     margin: 35px auto;
-    background-color: #fffdf8;
+    background-color: white;
     padding: 35px;
     border-radius: 12px;
+    border-top: 6px solid #009c3b;
 }
 
 /* Títulos */
 h2 {
-    color: #6b4f35;
-    font-size: 30px;
+    color: #007f2f;
+    font-size: 31px;
 }
 
-/* Parágrafos */
+/* Textos */
 p {
-    font-size: 19px;
+    font-size: 20px;
     line-height: 1.7;
 }
 
@@ -50,36 +53,38 @@ img {
     max-width: 100%;
     display: block;
     margin: 25px auto;
-    border-radius: 8px;
+    border-radius: 10px;
+    border: 4px solid #009c3b;
 }
 
 /* Vídeo */
 .video {
     width: 600px;
     max-width: 90%;
-    margin: 30px auto;
+    margin: 25px auto;
 }
 
 .video iframe {
     width: 100%;
     height: 340px;
-    border: none;
+    border: 4px solid #ffdf00;
     border-radius: 10px;
+    display: block;
 }
 
-/* Botão */
+/* Botão de Like */
 button {
-    background-color: #6b4f35;
+    background-color: #009c3b;
     color: white;
     border: none;
     padding: 13px 25px;
-    font-size: 18px;
+    font-size: 19px;
     border-radius: 6px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #8a6848;
+    background-color: #007f2f;
 }
 
 /* Área do p5.js */
@@ -91,8 +96,13 @@ button:hover {
 
 /* Segunda div class */
 .rodape {
-    background-color: #6b4f35;
+    background-color: #009c3b;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
+    border-top: 8px solid #ffdf00;
+}
+
+.rodape p {
+    font-size: 18px;
 }
