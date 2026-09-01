@@ -80,12 +80,12 @@ header {
     width: 360px;
     height: 250px;
 
-    left: 80px;
-    top: 45px;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
 
     background-color: #ffdf00;
-
-    transform: rotate(0deg);
 
     clip-path: polygon(
         50% 0%,
@@ -115,7 +115,6 @@ header {
 
     overflow: hidden;
 }
-
 /* Faixa branca */
 
 .faixa {
@@ -126,10 +125,12 @@ header {
 
     background-color: white;
 
-    left: -22px;
-    top: 62px;
+    left: 50%;
+    top: 50%;
 
-    transform: rotate(12deg);
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
 }
 
 
