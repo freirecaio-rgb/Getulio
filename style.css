@@ -54,11 +54,12 @@ img {
 }
 
 /* Vídeo */
-video {
-    width: 100%;
-    max-width: 750px;
+iframe {
+    width: 70%;
+    height: 400px;
     display: block;
     margin: 25px auto;
+    border-radius: 10px;
 }
 
 /* Botão */
