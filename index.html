@@ -1,43 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>O Grande Presidente </title>
-        <style>
-            header{
-                background-color: #009440;
-                color: white;
-                text-align: center;
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 16px;
-                border: 5px solid
-                #ffcb00;
-             }
-             main{ 
-                background-color: #002776;
-                color: white;
-                max-width: 800px;
-                margin: 0 auto;
-             }
-             img{ 
-                width: 160px;
-                height: 200px;
-                align-content: center;
-             }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>A historia de Getulio Vargas</h1>
-            <p>Vou contar a historia de um dos maiores lideres que o Brasil ja teve</p>
-        </header>
-         <main>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Get%C3%BAlio_Vargas_-_retrato_oficial_de_1930.JPG?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" alt="Retrato oficial de 1930">
-             <h2>Introdução</h2>
-             <p>Por Caio Freire</p>
-             <p>Boas-vindas ao meu site de historia! Aqui vou compartilhar uma linha temporal sobre a vida de Getulio.</p>
-        </main>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>História de Getúlio Vargas</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
+
+    <script src="../p5/sketch.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Getúlio Vargas</h1>
+        <p>História de um dos principais políticos brasileiros</p>
+    </header>
+
+    <div class="principal"> //primeria div
+
+        <section>
+            <h2>Quem foi Getúlio Vargas?</h2>
+
+            <p>
+                Getúlio Vargas nasceu em 1882, no Rio Grande do Sul.
+                Foi presidente do Brasil em diferentes períodos e teve
+                grande influência na política brasileira.
+            </p>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Getulio_Vargas_-_CPDOC.jpg"
+                 alt="Getúlio Vargas">
+        </section>
+
+        <article>
+            <h2>A Era Vargas</h2>
+
+            <p>
+                Vargas chegou ao poder em 1930, após a Revolução de 1930.
+                Seu governo realizou diversas mudanças políticas, econômicas
+                e sociais.
+            </p>
+
+            <p>
+                Em 1943, durante seu governo, foi criada a Consolidação
+                das Leis do Trabalho, conhecida como CLT.
+            </p>
+
+            <h2>Estado Novo</h2>
+
+            <p>
+                Em 1937, Vargas implantou o Estado Novo, um período
+                autoritário que durou até 1945.
+            </p>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Get%C3%BAlio_Vargas_1930.jpg"
+                 alt="Getúlio Vargas em 1930">
+        </article>
+
+        <section>
+            <h2>Vídeo</h2>
+
+            <video controls>
+                <source src="video-getulio.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+        </section>
+
+        <section>
+            <h2>Gostou do conteúdo?</h2>
+
+            <button onclick="curtir()">👍 Like</button>
+
+            <p id="likes">0 curtidas</p>
+        </section>
+
+        <section>
+            <h2>Interação com p5.js</h2>
+
+            <p>
+                Clique no quadro abaixo para mudar a interação.
+            </p>
+
+            <div id="p5-container"></div>
+        </section>
+
+    </div>
+
+    <div class="rodape">  // segunda div
+        <p>Trabalho escolar - História do Brasil</p>
+    </div>
+
+    <script>
+        // Contador de curtidas
+        let contador = 0;
+
+        function curtir() {
+            contador++;
+
+            document.getElementById("likes").innerText =
+                contador + " curtida(s)";
+        }
+    </script>
+
+</body>
 </html>
