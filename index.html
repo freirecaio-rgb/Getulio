@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,45 +6,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Getúlio Vargas - História do Brasil</title>
+    <title>Getúlio Vargas | História do Brasil</title>
 
-    <!-- Conecta o arquivo CSS -->
+    <!-- Conecta o CSS -->
     <link rel="stylesheet" href="style.css">
 
     <!-- Biblioteca p5.js -->
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
 
-    <!-- Conecta o JavaScript do p5.js -->
+    <!-- Meu código p5.js -->
     <script src="sketch.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Cabeçalho -->
+    <!-- ================= CABEÇALHO ================= -->
+
     <header>
 
         <div class="bandeira">
-            <div class="losango"></div>
-            <div class="circulo"></div>
+            <div class="losango">
+                <div class="circulo">
+                    <div class="faixa"></div>
+                </div>
+            </div>
         </div>
 
-        <h1>GETÚLIO VARGAS</h1>
-        <p>Uma parte importante da História do Brasil</p>
+        <div class="titulo">
+            <p class="brasil">BRASIL</p>
+
+            <h1>GETÚLIO VARGAS</h1>
+
+            <p>
+                História, política e transformações do Brasil
+            </p>
+        </div>
 
     </header>
 
-    <!-- Barra de navegação -->
+
+    <!-- ================= MENU ================= -->
+
     <nav>
+
         <a href="#inicio">Início</a>
-        <a href="#era-vargas">Era Vargas</a>
+        <a href="#era">Era Vargas</a>
         <a href="#linha">Linha do Tempo</a>
+        <a href="#brasil">Brasil</a>
         <a href="#video">Vídeo</a>
+
     </nav>
+
 
     <main>
 
-        <!-- Introdução -->
-        <section id="inicio" class="cartao">
+        <!-- ================= INTRODUÇÃO ================= -->
+
+        <section id="inicio" class="cartao destaque">
+
+            <div class="faixa-titulo">
+                HISTÓRIA DO BRASIL
+            </div>
 
             <h2>Quem foi Getúlio Vargas?</h2>
 
@@ -55,106 +78,155 @@
             </p>
 
             <p>
-                Vargas governou o Brasil em diferentes períodos e participou
-                de importantes transformações políticas, econômicas e sociais
-                durante o século XX.
+                Vargas governou o Brasil em diferentes períodos e esteve
+                relacionado a importantes transformações políticas,
+                econômicas e sociais durante o século XX.
             </p>
 
-            <img src="Getulio Vargas em 1930.jpg" alt="Getúlio Vargas em 1930">
+            <img src="Getulio Vargas em 1930.jpg" alt="Getúlio Vargas">
 
         </section>
 
-        <!-- Era Vargas -->
-        <section id="era-vargas" class="cartao">
 
-            <h2>A Era Vargas</h2>
+        <!-- ================= ERA VARGAS ================= -->
+
+        <section id="era" class="cartao">
+
+            <div class="faixa-titulo">
+                A ERA VARGAS
+            </div>
+
+            <h2>Transformações no Brasil</h2>
 
             <p>
-                A chamada Era Vargas começou em 1930, quando Getúlio Vargas
+                A Era Vargas começou em 1930, quando Getúlio Vargas
                 chegou ao poder após a Revolução de 1930.
             </p>
 
             <p>
-                Durante seus governos, o Brasil passou por mudanças na
-                indústria, nas relações de trabalho e na organização do
-                Estado.
+                Durante seus governos, ocorreram mudanças na organização
+                do Estado, nas relações de trabalho e no processo de
+                industrialização do país.
             </p>
 
-            <h3>Principais acontecimentos</h3>
+            <div class="blocos">
 
-            <ul>
-                <li>Revolução de 1930</li>
-                <li>Criação do Estado Novo em 1937</li>
-                <li>Criação da CLT em 1943</li>
-                <li>Industrialização do Brasil</li>
-                <li>Retorno à Presidência em 1951</li>
-            </ul>
+                <div class="bloco">
+                    <span>1930</span>
+                    <h3>Revolução</h3>
+                    <p>
+                        Vargas assume o poder e inicia um novo período
+                        político no Brasil.
+                    </p>
+                </div>
+
+                <div class="bloco">
+                    <span>1937</span>
+                    <h3>Estado Novo</h3>
+                    <p>
+                        Início de um período autoritário e de forte
+                        centralização política.
+                    </p>
+                </div>
+
+                <div class="bloco">
+                    <span>1943</span>
+                    <h3>CLT</h3>
+                    <p>
+                        Criação da Consolidação das Leis do Trabalho.
+                    </p>
+                </div>
+
+            </div>
 
             <img src="Getulio Vargas, retrato oficial.jpg" alt="Retrato de Getúlio Vargas">
 
         </section>
 
-        <!-- Linha do tempo -->
+
+        <!-- ================= LINHA DO TEMPO ================= -->
+
         <section id="linha" class="cartao">
 
-            <h2>Linha do Tempo</h2>
+            <div class="faixa-titulo">
+                LINHA DO TEMPO
+            </div>
+
+            <h2>A trajetória de Getúlio Vargas</h2>
 
             <p>
-                Eu criei esta linha do tempo para organizar alguns dos
-                acontecimentos mais importantes da trajetória de Getúlio Vargas.
+                Eu criei esta linha do tempo para organizar alguns
+                dos principais acontecimentos da trajetória de Vargas.
             </p>
 
             <div class="linha-tempo">
 
-                <div class="evento">
-                    <span>1882</span>
+                <div class="evento esquerda">
+                    <div class="ano">1882</div>
                     <h3>Nascimento</h3>
                     <p>
-                        Getúlio Vargas nasce em São Borja, no Rio Grande do Sul.
+                        Getúlio Vargas nasce em São Borja,
+                        no Rio Grande do Sul.
                     </p>
                 </div>
 
-                <div class="evento">
-                    <span>1930</span>
+
+                <div class="evento direita">
+                    <div class="ano">1909</div>
+                    <h3>Início na política</h3>
+                    <p>
+                        Inicia sua trajetória política como deputado
+                        estadual no Rio Grande do Sul.
+                    </p>
+                </div>
+
+
+                <div class="evento esquerda">
+                    <div class="ano">1930</div>
                     <h3>Revolução de 1930</h3>
                     <p>
-                        Vargas assume o poder e inicia um novo período político
-                        na história brasileira.
+                        Vargas chega ao poder após a Revolução
+                        de 1930.
                     </p>
                 </div>
 
-                <div class="evento">
-                    <span>1937</span>
+
+                <div class="evento direita">
+                    <div class="ano">1937</div>
                     <h3>Estado Novo</h3>
                     <p>
-                        Vargas estabelece o Estado Novo, um regime autoritário
-                        que duraria até 1945.
+                        Vargas estabelece o Estado Novo,
+                        um período autoritário.
                     </p>
                 </div>
 
-                <div class="evento">
-                    <span>1943</span>
+
+                <div class="evento esquerda">
+                    <div class="ano">1943</div>
                     <h3>Criação da CLT</h3>
                     <p>
-                        É criada a Consolidação das Leis do Trabalho.
+                        É criada a Consolidação das Leis
+                        do Trabalho.
                     </p>
                 </div>
 
-                <div class="evento">
-                    <span>1951</span>
-                    <h3>Retorno ao poder</h3>
+
+                <div class="evento direita">
+                    <div class="ano">1951</div>
+                    <h3>Retorno à Presidência</h3>
                     <p>
-                        Vargas retorna à Presidência após ser eleito pelo voto
-                        popular.
+                        Vargas retorna ao cargo de presidente
+                        após ser eleito pelo voto popular.
                     </p>
                 </div>
 
-                <div class="evento">
-                    <span>1954</span>
-                    <h3>Fim de sua trajetória</h3>
+
+                <div class="evento esquerda">
+                    <div class="ano">1954</div>
+                    <h3>Fim da trajetória</h3>
                     <p>
-                        Getúlio Vargas morre em 24 de agosto de 1954,
-                        no Palácio do Catete.
+                        Getúlio Vargas morre em 24 de agosto
+                        de 1954, no Palácio do Catete.
                     </p>
                 </div>
 
@@ -162,34 +234,40 @@
 
         </section>
 
-        <!-- Brasil na Era Vargas -->
-        <section class="cartao brasil">
 
-            <h2>O Brasil na Era Vargas</h2>
+        <!-- ================= BRASIL ================= -->
 
-            <div class="informacoes">
+        <section id="brasil" class="cartao brasil">
 
-                <div>
+            <div class="faixa-titulo">
+                O BRASIL NA ERA VARGAS
+            </div>
+
+            <h2>Principais áreas de transformação</h2>
+
+            <div class="blocos">
+
+                <div class="bloco verde">
                     <h3>Indústria</h3>
                     <p>
-                        O período foi marcado pelo crescimento da
-                        industrialização brasileira.
+                        O período foi marcado pelo crescimento
+                        da industrialização brasileira.
                     </p>
                 </div>
 
-                <div>
+                <div class="bloco amarelo">
                     <h3>Trabalho</h3>
                     <p>
-                        O governo criou e consolidou diversas leis
-                        relacionadas aos trabalhadores.
+                        Foram criadas e organizadas importantes
+                        leis relacionadas aos trabalhadores.
                     </p>
                 </div>
 
-                <div>
+                <div class="bloco azul">
                     <h3>Política</h3>
                     <p>
-                        Vargas governou em períodos democráticos e também
-                        durante um regime autoritário.
+                        Vargas governou em diferentes contextos,
+                        incluindo períodos democrático e autoritário.
                     </p>
                 </div>
 
@@ -197,40 +275,64 @@
 
         </section>
 
-        <!-- Vídeo -->
+
+        <!-- ================= VÍDEO ================= -->
+
         <section id="video" class="cartao">
+
+            <div class="faixa-titulo">
+                CONTEÚDO AUDIOVISUAL
+            </div>
 
             <h2>Vídeo sobre Getúlio Vargas</h2>
 
             <div class="video">
+
                 <iframe
                     src="https://www.youtube.com/embed/6NxGvcu1EGU"
                     title="Vídeo sobre Getúlio Vargas"
                     allowfullscreen>
                 </iframe>
+
             </div>
 
         </section>
 
-        <!-- Like -->
+
+        <!-- ================= LIKE ================= -->
+
         <section class="cartao interacao">
+
+            <div class="faixa-titulo">
+                INTERAÇÃO
+            </div>
 
             <h2>Gostou do site?</h2>
 
-            <button onclick="curtir()">👍 Curtir</button>
+            <button onclick="curtir()">
+                👍 CURTIR
+            </button>
 
-            <p id="likes">0 curtidas</p>
+            <p id="likes">
+                0 curtidas
+            </p>
 
         </section>
 
-        <!-- p5.js -->
+
+        <!-- ================= P5 ================= -->
+
         <section class="cartao">
 
-            <h2>Minha criação em p5.js</h2>
+            <div class="faixa-titulo">
+                MINHA CRIAÇÃO
+            </div>
+
+            <h2>Animação em p5.js</h2>
 
             <p>
                 Esta animação foi criada por mim utilizando p5.js.
-                Clique na área abaixo para interagir com ela.
+                Clique no quadro para interagir com a animação.
             </p>
 
             <div id="p5-container"></div>
@@ -239,10 +341,16 @@
 
     </main>
 
-    <!-- Rodapé -->
+
+    <!-- ================= RODAPÉ ================= -->
+
     <footer>
 
-        <h3>Trabalho de Educação Digital</h3>
+        <div class="mini-bandeira">
+            <div></div>
+        </div>
+
+        <h2>TRABALHO DE EDUCAÇÃO DIGITAL</h2>
 
         <p>
             Desenvolvido por <strong>Caio Freire</strong>
@@ -256,11 +364,18 @@
             Tema: História de Getúlio Vargas
         </p>
 
+        <div class="cores-brasil">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
     </footer>
+
 
     <script>
 
-        // Contador do botão de Like
+        // Contador de curtidas
         let contador = 0;
 
         function curtir() {
@@ -276,7 +391,4 @@
 
 </body>
 
-</html>
-
-</body>
 </html>
