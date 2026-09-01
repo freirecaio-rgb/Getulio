@@ -1,38 +1,96 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>História de Getúlio Vargas</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            color: #222;
+        }
 
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
 
-    <script src="../p5/sketch.js" defer></script>
+        .principal {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .imagem {
+            text-align: center;
+            margin: 20px;
+        }
+
+        img {
+            width: 300px;
+            border-radius: 8px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- Cabeçalho do site -->
     <header>
         <h1>Getúlio Vargas</h1>
-        <p>História de um dos principais políticos brasileiros</p>
+        <p>Um dos personagens mais importantes da história do Brasil</p>
     </header>
 
-    <div class="principal"> //primeria div
+    <!-- Primeira div class -->
+    <div class="principal">
 
         <section>
             <h2>Quem foi Getúlio Vargas?</h2>
 
             <p>
-                Getúlio Vargas nasceu em 1882, no Rio Grande do Sul.
-                Foi presidente do Brasil em diferentes períodos e teve
-                grande influência na política brasileira.
+                Getúlio Vargas foi um político brasileiro que governou o Brasil
+                em diferentes períodos. Ele nasceu em 1882, no Rio Grande do Sul,
+                e teve grande influência na política brasileira durante o século XX.
             </p>
 
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Getulio_Vargas_-_CPDOC.jpg"
-                 alt="Getúlio Vargas">
+            <!-- Primeira imagem -->
+            <div class="imagem">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Getulio_Vargas_-_CPDOC.jpg"
+                     alt="Getúlio Vargas">
+            </div>
         </section>
 
         <article>
@@ -40,29 +98,35 @@
 
             <p>
                 Vargas chegou ao poder em 1930, após a Revolução de 1930.
-                Seu governo realizou diversas mudanças políticas, econômicas
-                e sociais.
+                Seu governo promoveu diversas mudanças políticas, econômicas
+                e sociais no Brasil.
             </p>
 
             <p>
-                Em 1943, durante seu governo, foi criada a Consolidação
-                das Leis do Trabalho, conhecida como CLT.
+                Durante seu governo, foram criadas importantes leis trabalhistas,
+                incluindo a Consolidação das Leis do Trabalho (CLT), em 1943.
             </p>
 
             <h2>Estado Novo</h2>
 
             <p>
-                Em 1937, Vargas implantou o Estado Novo, um período
-                autoritário que durou até 1945.
+                Em 1937, Vargas estabeleceu o Estado Novo, um período
+                autoritário que durou até 1945. Durante esse período,
+                o governo concentrou grande quantidade de poder e restringiu
+                liberdades políticas.
             </p>
 
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Get%C3%BAlio_Vargas_1930.jpg"
-                 alt="Getúlio Vargas em 1930">
+            <!-- Segunda imagem -->
+            <div class="imagem">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Get%C3%BAlio_Vargas_1930.jpg"
+                     alt="Getúlio Vargas em 1930">
+            </div>
         </article>
 
         <section>
-            <h2>Vídeo</h2>
+            <h2>Vídeo sobre Getúlio Vargas</h2>
 
+            <!-- Vídeo -->
             <video controls>
                 <source src="video-getulio.mp4" type="video/mp4">
                 Seu navegador não suporta vídeos.
@@ -70,36 +134,30 @@
         </section>
 
         <section>
-            <h2>Gostou do conteúdo?</h2>
+            <h2>Você gostou do conteúdo?</h2>
 
+            <!-- Botão de Like -->
             <button onclick="curtir()">👍 Like</button>
-
             <p id="likes">0 curtidas</p>
         </section>
 
-        <section>
-            <h2>Interação com p5.js</h2>
-
-            <p>
-                Clique no quadro abaixo para mudar a interação.
-            </p>
-
-            <div id="p5-container"></div>
-        </section>
-
     </div>
 
-    <div class="rodape">  // segunda div
-        <p>Trabalho escolar - História do Brasil</p>
+    <!-- Segunda div class -->
+    <div class="imagem">
+        <p>Trabalho escolar sobre a história do Brasil.</p>
     </div>
+
+    <footer>
+        <p>Site sobre Getúlio Vargas - História do Brasil</p>
+    </footer>
 
     <script>
-        // Contador de curtidas
+        // Função para aumentar o número de curtidas
         let contador = 0;
 
         function curtir() {
             contador++;
-
             document.getElementById("likes").innerText =
                 contador + " curtida(s)";
         }
@@ -107,3 +165,4 @@
 
 </body>
 </html>
+```
